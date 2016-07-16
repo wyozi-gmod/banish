@@ -1,0 +1,25 @@
+[package]
+name = "banish"
+version = "0.1.0"
+authors = ["wyozi"]
+build = "build.rs"
+
+[lib]
+name = "banish"
+path = "src/lib.rs"
+crate-type = [ "staticlib" ]
+
+[[bin]]
+name = "banishbin"
+path = "src/main.rs"
+
+[dependencies]
+libc = "0.2"
+
+[dependencies.hyper]
+version = "0.9.10"
+default-features = false
+features = []
+
+[build-dependencies]
+rusty-cheddar = "0.3.0"
